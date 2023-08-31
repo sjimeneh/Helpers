@@ -1,0 +1,132 @@
+var scheduleObj = new ej.schedule.Schedule({
+    height: "550px",
+    selectedDate: new Date(),
+    // views: ["TimelineDay", "TimelineWeek"], TODO
+    views: [
+        { option: 'Day' },
+        { option: 'TimelineDay' },
+        { option: 'TimelineMonth' },
+        { option: 'Year'}, // para seleccionar por defecto un tiempo puedo añadir la propiedad al obteto:, isSelected: true 
+    ],
+    allowDragAndDrop: true,
+    eventSettings: { dataSource: dataManager },
+    timeZone: "America/Bogota",
+    group: {
+      resources: ["Employees"],
+    },
+    resources: [
+      {
+        field: "EmployeeID",
+        title: "Employee",
+        name: "Employees",
+        allowMultiple: true,
+        dataSource: [
+          {
+            text: "John Smith",
+            id: 1,
+            color: "#ea7a57",
+            department: "Sales",
+            phone: "(123) 456-7890",
+            email: "john.smith@example.com",
+            Designation: 'Acceso Fijo'
+          },
+          {
+            text: "Jane Doe",
+            id: 2,
+            color: "#7fa900",
+            department: "Marketing",
+            phone: "(123) 456-7890",
+            email: "jane.doe@example.com",
+            Designation: 'Acceso Fijo'
+          },
+          {
+            text: "Bob Johnson",
+            id: 3,
+            color: "#5978ee",
+            department: "Engineering",
+            phone: "(123) 456-7890",
+            email: "bob.johnson@example.com",
+            Designation: 'Filtro'
+          },
+          {
+            text: "Lisa Lee",
+            id: 4,
+            color: "#fec200",
+            department: "Customer Support",
+            phone: "(123) 456-7890",
+            email: "lisa.lee@example.com",
+            Designation: 'Filtro'
+          },
+          {
+            text: "Tom Thompson",
+            id: 5,
+            color: "#df5286",
+            department: "Human Resources",
+            phone: "(123) 456-7890",
+            email: "tom.thompson@example.com",
+            Designation: 'Cargue'
+          },
+          {
+            text: "Samantha Kim",
+            id: 6,
+            color: "#00bdae",
+            department: "Finance",
+            phone: "(123) 456-7890",
+            email: "samantha.kim@example.com",
+            Designation: 'Cargue'
+          },
+          {
+            text: "Jackie Chan",
+            id: 7,
+            color: "#865fcf",
+            department: "Operations",
+            phone: "(123) 456-7890",
+            email: "jackie.chan@example.com",
+            Designation: 'Acceso Fijo'
+          },
+          {
+            text: "Will Smith",
+            id: 8,
+            color: "#1aaa55",
+            department: "Product Management",
+            phone: "(123) 456-7890",
+            email: "will.smith@example.com",
+            Designation: 'Acceso Fijo'
+          },
+          {
+            text: "Mia Johnson",
+            id: 9,
+            color: "#df5286",
+            department: "Design",
+            phone: "(123) 456-7890",
+            email: "mia.johnson@example.com",
+            Designation: 'Acceso Fijo'
+          },
+          {
+            text: "David Brown",
+            id: 10,
+            color: "#710193",
+            department: "Research",
+            phone: "(123) 456-7890",
+            email: "david.brown@example.com",
+            Designation: 'Acceso Fijo'
+          },
+        ],
+        textField: "text",
+        idField: "id",
+        groupIDField: 'GroupId',
+        colorField: "color",
+      },
+    ],
+  });
+  
+  scheduleObj.appendTo("#Schedule");
+  
+  
+      // data manager initialization.
+      var dataManager = new ej.data.DataManager({
+        url: "http://localhost/ ej2-php-crud-service /server.php",
+        crudUrl: "http://localhost/ ej2-php-crud-service /server.php",
+        adaptor: new ej.data.UrlAdaptor(),
+        crossDomain: true,
+      });

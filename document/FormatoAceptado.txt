@@ -1,0 +1,15 @@
+[
+    {
+        Id: 1,
+        Subject: 'Reunión de equipo',
+        StartTime: new Date(2023, 3, 12, 10, 0),
+        EndTime: new Date(2023, 3, 12, 11, 0),
+    },
+    {
+        Id: 2,
+        Subject: 'Cita con el cliente',
+        StartTime: new Date(2023, 3, 14, 14, 0),
+        EndTime: new Date(2023, 3, 14, 15, 0),
+    },
+    // más eventos...
+]

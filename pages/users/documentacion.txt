@@ -1,0 +1,1 @@
+La Interfaz de userCreate se implementa como ventana modal en el archivo userIndex

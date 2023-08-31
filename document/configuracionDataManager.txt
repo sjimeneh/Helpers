@@ -1,0 +1,4 @@
+var dataManager = new ej.data.DataManager({
+   url: 'https://localhost:3000/api/events',
+   crudUrl: 'https://localhost:3000/api/events/crud'
+});
