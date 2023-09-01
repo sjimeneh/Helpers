@@ -58,6 +58,10 @@ $url_logout = "http://htc5cg6021v3q.epmtelco.com.co/SAM/php/components/DestroySe
         <p><a href="http://htc5cg6021v3q.epmtelco.com.co/SAM/pages/Helpers/elementos_de_red/comandos.php">Comandos</a></p>
         <p><a href="http://htc5cg6021v3q.epmtelco.com.co/SAM/pages/Helpers/elementos_de_red/conexion_nodos_rphy.php">Conexion Nodos RPHY</a></p>
       </li>
+      <li class="nav-link-menu margin-menu-nav">
+        <h5>Aplicaciones</h5>
+        <p><a href="#">Rutas de Aplicaciones</a></p>
+      </li>
 
     </ul>
     </li>
